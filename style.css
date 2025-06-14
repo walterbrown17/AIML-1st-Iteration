@@ -1,0 +1,157 @@
+
+/* Tag selector */
+section {
+    margin-bottom: 50px;
+}
+
+/* Class selector */
+.css-advanced-section {
+    background-color: #fdf6ed;
+    padding: 30px;
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ID selector */
+#main-text {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fff0dc;
+    border: 2px dashed #b34215;
+    border-radius: 6px;
+}
+
+/* Combined selector */
+p.note, #main-text {
+    font-size: 1.1em;
+}
+
+/* Parent > child selector */
+section > h2 {
+    color: #b34215;
+}
+
+/* Ancestor descendant selector */
+.css-advanced-section ul li {
+    margin: 6px 0;
+}
+
+/* Reusable styles */
+.styled-list {
+    padding-left: 20px;
+}
+
+/* Box model demo */
+.box-model-demo {
+    width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #b34215;
+    background-color: #ffefd5;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Section container for Flexbox content */
+.flexbox-section {
+  background-color: #fdf7f0;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Flex layout: splits explanation and demo into two halves */
+.flex-container {
+  display: flex;                   /* Enables flexbox */
+  justify-content: space-between; /* Space between child items */
+  align-items: flex-start;        /* Align items from the top */
+  flex-wrap: wrap;                /* Allows wrapping on smaller screens */
+  gap: 20px;                      /* Space between items */
+}
+
+/* Text explanation side */
+.flex-text {
+  flex: 1 1 45%;                  /* Flex-grow/shrink, base width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Styled cards for div and flexbox explanation */
+.info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 5px solid #b34215;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.info-card:hover {
+  transform: translateY(-5px); /* subtle hover effect */
+}
+
+/* Flexbox demo area */
+.flex-demo {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #e3caa5;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Individual flex items */
+.flex-item {
+  background-color: #fff;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.flex-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Flexbox tip text */
+.flex-tip {
+  margin-top: 30px;
+  font-style: italic;
+  color: #5a3221;
+  background-color: #fff9f2;
+  padding: 15px;
+  border-left: 5px solid #b34215;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+
+/* Header Section */
+
+
+header {
+            background-color: #5c1f08;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }

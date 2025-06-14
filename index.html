@@ -1,0 +1,463 @@
+<!--                                           -------- DISCLAIMER --------
+    
+
+    These are the slides that you should refer for your revision and it contains all the topics that i had discussed in the class
+
+    All the explaination related to each topic will provided in these comment line so Keep-out for them when you are stuck.
+-----------------------------------------------------------------------------------------------------------------------------------
+
+-->
+
+<!-- 
+        This slide is for HTML structure in example part i will be adding some from our portfolio site.
+-->
+
+<!DOCTYPE html> <!-- Declares the document type and version. Here, it tells the browser this is an HTML5 document. -->
+
+<html lang="en"> <!-- Root element of the HTML page. 'lang="en"' specifies that the document language is English. -->
+
+<head> <!-- Head section starts -->
+  
+    <!-- The <head> section contains information about the webpage, not displayed on the page itself.
+         This includes metadata, links to CSS files, JavaScript files, fonts, SEO info, etc. 
+         Can be used for writing Internal CSS
+         -->
+
+    <meta charset="UTF-8"> <!-- Defines the character encoding (UTF-8 covers almost all characters worldwide). -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- This makes the website responsive: it scales properly on devices of various widths like mobile, tablet, or desktop. -->
+
+    <title>HTML Structure Explained</title> 
+    <!-- The title of the webpage. This text appears on the browser tab or window title bar. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Example for linking an external CSS file:
+    <link rel="stylesheet" href="style.css">
+    -->
+
+    <!-- Example for linking an external JavaScript file:
+    <script src="script.js"></script>
+    -->
+
+
+    <!-- 
+
+            The below added style refers to the first section on CSS.
+
+    -->
+    <style>
+        .css-section {
+    background-color: #fff9f2;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #5c1f08;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px dashed #b34215;
+    padding-bottom: 10px;
+}
+
+.syntax-box {
+    background-color: #f0e1d2;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    white-space: pre;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 5px #c9b3a7;
+}
+
+.styled-list li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    line-height: 1.5em;
+}
+
+.sub-title {
+    font-size: 1.6em;
+    color: #8b4513;
+    margin-top: 30px;
+    border-left: 4px solid #b34215;
+    padding-left: 10px;
+}
+
+.demo {
+    background-color: #fdf1e5;
+    border: 2px dashed #e3caa5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#mainTitle {
+    color: #a52a2a;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.note {
+    background-color: #fff0e6;
+    padding: 10px;
+    border-left: 5px solid #b34215;
+    font-style: italic;
+}
+
+.parent p {
+    color: #4a2c2a;
+    margin-top: 10px;
+}
+
+.parent > span > p {
+    font-style: italic;
+    color: #555;
+}
+
+    </style>
+
+        <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue; /* Content */
+            padding: 20px;              /* Padding area */
+            border: 5px solid black;    /* Border area */
+            margin: 30px;               /* Margin area */
+        }
+    </style>
+
+</head> <!-- Head section ends -->
+<script>
+  document.getElementById('doubtForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const doubt = document.getElementById('doubt').value.trim();
+
+    if (doubt.length === 0) {
+      alert("Please enter your doubt before submitting.");
+      return;
+    }
+
+    // Show a confirmation message
+    alert(`Thank you, ${name}! Your doubt has been noted.\n\nWe'll get back to you soon.`);
+
+    // Optionally clear the form
+    this.reset();
+
+    // You could also log it to console for now
+    console.log("New Doubt Submitted:", { name, email, doubt });
+  });
+</script>
+<body style="background-color: #dfd3c3;"> <!-- Body section starts: everything inside this tag will be visible on the browser -->
+    <section id="Hero"> 
+
+        <header>
+            <nav>
+                <a href="#Hero">Home</a>
+                <a href="#tag-element">Tag vs Element</a>
+                <a href="#attributes">Attributes</a>
+                <a href="#lists">Lists</a>
+                <a href="#tables">Tables</a>
+                <a href="#css-syntax">CSS Syntax</a>
+                <a href="#advanced-css">Advanced CSS</a>
+                <a href="#flexbox">Flexbox</a>
+            </nav>
+        </header>
+
+        <h1 style="color: black; font-family: sans-serif; font-size: 4em;">Basic HTML Structure Example</h1> 
+    <!-- Heading level 1: This is the main title of the webpage. There are six levels of headings: h1 to h6. -->
+
+        <p style="color: #b34215; font-size:1.5em;" >To understand the structure, read the comments between the code.</p> 
+    <!-- Paragraph element: Used to display text content on the page. -->section
+
+        <!-- Anchor (Link) element below: Used to create a hyperlink.
+         'href' is the destination URL.
+         'target="_blank"' makes the link open in a new browser tab. -->
+            <a href="https://drive.google.com/drive/folders/1mM40Vb2TOg3kSPNlQAtbvknHGUes0iG2?usp=sharing" target="_blank" style="font-size: larger;">This link will take you to the drive of slides</a>
+            <!-- Anchor tag can also refer to any element in your document as shown <a href = "#id">text</a>   -->
+        <!-- Unordered list below: A list where each item is marked with a bullet point.
+            Each list item is wrapped inside <li> tags. -->
+        </p>
+        
+
+    </section>
+    <section id="tag-element">
+        <h1>Difference between Tag and Element</h1>
+    
+    <!-- Tag Example -->
+    <!-- <p> is a Tag (just the opening or closing like <p> or </p>) -->
+
+    <!-- Element Example -->
+    <!-- <p>This is a paragraph</p> is an Element (opening tag + content + closing tag) -->
+
+        <p><strong>Tag:</strong> &lt;p&gt; or &lt;/p&gt;</p>
+        <p><strong>Element:</strong> &lt;p&gt;This is a paragraph&lt;/p&gt;</p>
+    
+
+    </section>
+
+
+    <section id="attributes">
+        <h1>What are Attributes?</h1>
+    
+    <!-- Attributes provide extra information to an element -->
+    <!-- Example: The 'src' and 'alt' attributes in an image tag -->
+        <img src="./images/RCB.jpg" alt="%ee saala cup namde" style="height: 10%;width: 16%;">
+
+    </section>
+
+    <section id="lists">
+            <h1>Unordered and Ordered Lists - Best Practices</h1>
+    
+    <!-- Unordered List explaining best practices -->
+        <h2>Unordered List - Key Points</h2>
+        <ul>
+            <li>Always use &lt;ul&gt; for lists where the order doesn't matter.</li>
+            <li>Each list item should be wrapped in an &lt;li&gt; tag.</li>
+            <li>Indent child list items properly for readability.</li>
+            <li>Use semantic lists to improve accessibility and SEO.</li>
+        </ul>
+
+    <!-- Ordered List explaining best practices -->
+        <h2>Ordered List - Key Points</h2>
+        <ol>
+            <li>Use &lt;ol&gt; when the sequence of items is important (e.g., steps).</li>
+            <li>Ensure that each step is clear and concise inside an &lt;li&gt; tag.</li>
+            <li>Maintain proper nesting if sublists are needed within an item.</li>
+            <li>Avoid excessive list nesting to keep the HTML structure clean.</li>
+        </ol>
+    </section>
+    <section id="tables"> 
+    <h1>Understanding Tables in HTML</h1>
+
+    <!-- 
+        Tables are used to display tabular data in rows and columns.
+        The <table> tag defines the table.
+        Use <tr> for table rows, <th> for header cells, and <td> for data cells.
+        <thead>, <tbody>, and <tfoot> help organize and style parts of a table semantically.
+    -->
+    <!-- 
+        The <table> element is used to create a table.
+        cellpadding: adds space inside each cell
+        cellspacing: sets the space between cells (0 means no space)
+        border: sets border thickness
+        style: adds inline CSS for width, margin, border style, alignment, background color
+    -->
+    <table 
+        cellpadding="10" 
+        border="10px" 
+        cellspacing="0" 
+        style="width: 60%; margin: 20px auto; border-style: solid; border: 2px; text-align: center; background-color: #fefefe;">
+        
+        <!-- The <thead> contains the heading row(s) of the table -->
+        <thead style="background-color: #e3caa5;">
+            <tr> <!-- A table row -->
+                <th>Importance of Tables</th> <!-- Table heading cell -->
+                <th>Uses of Table Tag</th> <!-- Table heading cell -->
+            </tr>
+        </thead>
+
+        <!-- The <tbody> contains the main content of the table -->
+        <tbody>
+            <tr> <!-- Row 1 -->
+                <td>Organizes data in a structured format</td> <!-- Data cell -->
+                <td>Displaying schedules, results, product comparisons</td> <!-- Data cell -->
+            </tr>
+            <tr> <!-- Row 2 -->
+                <td>Makes content easier to read and understand</td>
+                <td>Used in admin panels, dashboards, reports</td>
+            </tr>
+            <tr> <!-- Row 3 -->
+                <td>Helps in presenting large data clearly</td>
+                <td>Used in inventory systems, financial data, etc.</td>
+            </tr>
+        </tbody>
+
+        <!-- The <tfoot> typically holds summary or footer data for the table -->
+        <tfoot>
+            <tr>
+                <!-- colspan="2" merges two columns into one for the footer message -->
+                <td colspan="2" style="text-align: center;">
+                    Tables enhance readability and data organization on webpages
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+<section class="css-section" id="css-syntax">
+    <h1 class="section-title">CSS Syntax and Selectors</h1>
+
+    <p><strong>Syntax of CSS:</strong></p>
+    <pre class="syntax-box">
+selector {
+    property: value;
+}
+    </pre>
+
+    <p><strong>How to apply CSS:</strong></p>
+    <ul class="styled-list">
+        <li><strong>Inline CSS:</strong> Written directly in the HTML tag using style attribute as <code>style="property:value;"</code>, you can find the example in the body tag</li>
+        <li><strong>Internal CSS:</strong> Written inside a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code></li>
+        <li><strong>External CSS:</strong> Written in a separate <code>.css</code> file and linked to the HTML</li>
+    </ul>
+
+    <h2 class="sub-title">Types of CSS Selectors</h2>
+    <ul class="styled-list">
+        <li><strong>Tag Selector:</strong> Targets all elements of a given tag (<code>p {}</code>)</li>
+        <li><strong>Class Selector:</strong> Targets elements with a class attribute (<code>.note {}</code>)</li>
+        <li><strong>ID Selector:</strong> Targets a single unique element (<code>#mainTitle {}</code>)</li>
+        <li><strong>Parent > Child Selector:</strong> Targets direct children (<code>section > p</code>)</li>
+        <li><strong>Ancestor Descendant Selector:</strong> Targets nested elements (<code>section p</code>)</li>
+        <li><strong>Combined Selector:</strong> Targets elements with multiple conditions (<code>p.note, #mainTitle</code>)</li>
+    </ul>
+
+    <!-- Live Demo -->
+    <div class="demo">
+        <h2 id="mainTitle">This is a Heading (ID selector)</h2>
+        <p class="note">This is a paragraph with a class "note".</p>
+        <div class="parent">
+            <p>This is a paragraph inside a div (descendant selector)</p>
+            <span><p>This is a nested paragraph (child of span inside div)</p></span>
+        </div>
+    </div>
+</section>
+<section class="css-advanced-section" id="advanced-css">
+    <h1 class="section-title">Understanding Cascading, Specificity, and the Box Model</h1>
+
+    <!-- Cascading -->
+    <h2 class="sub-title">Cascading in CSS</h2>
+    <p>The term <strong>Cascading</strong> means multiple CSS rules can apply to the same element, and the browser must decide which one wins.</p>
+    <ul class="styled-list">
+        <li><strong>Source Order</strong> – Last rule wins if specificity is the same.</li>
+        <li><strong>Specificity</strong> – ID > Class > Tag selector.</li>
+        <li><strong>Important</strong> – <code>!important</code> overrules everything (avoid overuse).</li>
+    </ul>
+
+    <!-- Specificity -->
+    <h2 class="sub-title">Specificity Example</h2>
+    <div class="specificity-demo">
+        <p class="example-text note" id="main-text" style="color: green;">This uses <strong>inline CSS</strong>, so it overrides external and internal styles.</p>
+    </div>
+
+    <!-- Box Model -->
+    <h2 class="sub-title">CSS Box Model</h2>
+    </ul>
+
+       <div class="box">
+        Content Area
+    </div>
+
+    <p><strong>Explanation:</strong></p>
+    <ul>
+        <li><b>Content:</b> The light blue area where text "Content Area" is shown.</li>
+        <li><b>Padding:</b> 20px space inside the border, making space around the content.</li>
+        <li><b>Border:</b> 5px solid black line surrounding the padding and content.</li>
+        <li><b>Margin:</b> 30px space outside the border, creating distance from other elements.</li>
+    </ul>
+
+</section>
+<!-- ===== Section: <div> and CSS Flexbox ===== -->
+<section class="flexbox-section" id="flexbox">
+  
+  <!-- Section Title -->
+  <h1 class="section-title">Understanding &lt;div&gt; and CSS Flexbox</h1>
+
+  <!-- Flex Container: Explanation on left, Flex demo on right -->
+  <div class="flex-container">
+
+    <!-- Left Side: Explanations -->
+    <div class="flex-text">
+
+      <!-- Explanation about <div> -->
+      <div class="info-card">
+        <h2>&lt;div&gt; Element</h2>
+        <p>
+          The <code>&lt;div&gt;</code> tag is a block-level element used to group content.
+          It is primarily used for layout and styling with CSS.
+        </p>
+      </div>
+
+      <!-- Explanation about Flexbox -->
+      <div class="info-card">
+        <h2>Flexbox Layout</h2>
+        <p>
+          Flexbox is a CSS layout model that distributes space and aligns items efficiently.
+          It's ideal for building responsive UIs where items adjust dynamically.
+        </p>
+        <ul>
+          <li><strong>display: flex;</strong> → turns a container into a flexbox.</li>
+          <li><strong>justify-content:</strong> controls horizontal spacing.</li>
+          <li><strong>align-items:</strong> controls vertical alignment.</li>
+          <li><strong>flex-wrap:</strong> allows items to wrap on small screens.</li>
+          <li> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"><i>Check this link for all the properties of Flexbox</i></a>
+          </li>
+          <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/"><strong>Also read about Grid from here.</strong></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Right Side: Flexbox Demo -->
+    <div class="flex-demo">
+      <div class="flex-item">
+        <strong>Item 1</strong><br>Header or Nav
+      </div>
+      <div class="flex-item">
+        <strong>Item 2</strong><br>Main Content
+      </div>
+      <div class="flex-item">
+        <strong>Item 3</strong><br>Sidebar or Footer
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Flexbox Tip -->
+  <div class="flex-tip">
+    🧠 <strong>Tip:</strong> Use Flexbox for arranging items in rows/columns and controlling spacing and wrapping.
+  </div>
+
+</section>
+
+<section id="javascript" class="css-section">
+  <h1 class="section-title">JavaScript: Interactivity with Forms</h1>
+
+  <p>Use the form below to submit any doubts or questions you have. It demonstrates basic JS form handling.</p>
+
+  <form id="doubtForm" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: auto;">
+    <label>
+      Name:
+      <input type="text" id="name" required placeholder="Your name" style="width: 100%; padding: 8px;">
+    </label>
+    <label>
+      Email (optional):
+      <input type="email" id="email" placeholder="Your email" style="width: 100%; padding: 8px;">
+    </label>
+    <label>
+      Your Doubt:
+      <textarea id="doubt" required placeholder="Write your question here..." rows="5" style="width: 100%; padding: 8px;"></textarea>
+    </label>
+    <button type="submit" style="padding: 10px; background-color: #5c1f08; color: white; border: none; border-radius: 5px;">Submit</button>
+  </form>
+
+  <p class="note">This form does not store data on a server. It simply demonstrates form validation and JavaScript event handling.</p>
+</section>
+
+
+
+
+</body> <!-- Body section ends -->
+
+</html> <!-- HTML document ends -->
